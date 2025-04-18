@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MAIT Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>MAIT College Quiz</h1>
+    <button id="dark-toggle">🌙 Toggle Dark Mode</button>
+  </header>
+
+  <main>
+    <section id="quiz-container">
+      <div id="progress-bar"><div id="progress"></div></div>
+      <div id="question-counter"></div>
+      <div id="timer"></div>
+
+      <div id="question-box">
+        <h2 id="question">Loading question...</h2>
+      </div>
+
+      <div id="options"></div>
+
+      <button id="submit-btn">Submit Answer</button>
+      <div id="feedback"></div>
+    </section>
+
+    <section id="result-box" class="hidden">
+      <h2>Your Score: <span id="score"></span>/10</h2>
+      <button onclick="location.reload()">🔁 Retake Quiz</button>
+    </section>
+
+    <section id="admin-panel" class="hidden">
+      <h2>🛠 Admin Panel (Add Question)</h2>
+      <input type="text" id="admin-question" placeholder="Enter question" /><br />
+      <input type="text" id="admin-opt1" placeholder="Option 1" />
+      <input type="text" id="admin-opt2" placeholder="Option 2" />
+      <input type="text" id="admin-opt3" placeholder="Option 3" />
+      <input type="text" id="admin-opt4" placeholder="Option 4" />
+      <input type="number" id="admin-answer" placeholder="Correct option index (0-3)" /><br />
+      <button onclick="addNewQuestion()">Add Question</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Maharaja Agrasen Institute of Technology</p>
+  </footer>
+
+  <script src="question.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
